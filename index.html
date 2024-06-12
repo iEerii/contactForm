@@ -7,44 +7,48 @@
         <title>Contact Form</title>
     </head>
     <body>
-        <div class="main-container">
-            <div class="tittle__container">
+        <main class="main-container">
+            <header class="tittle__container">
                 <h1>Contact us</h1>
-            </div>
+            </header>
             <div class="container" id="user__container">
-                <div>
-                    <label for="">First name</label>
+                <div class="container__information">
+                    <label for="">First name *</label>
                     <input type="text">
                 </div>
-                <div>
-                    <label for="">Last name</label>
+                <div class="container__information">
+                    <label for="">Last name *</label>
                     <input type="text">
                 </div>
-                <div>
-                    <label for="">Email</label>
+            </div>
+                <div class="container__information">
+                    <label for="">Email *</label>
                     <input type="email">
                 </div>
+            <div class="container__query" id="options__container">
+                <p>Query Type *</p>
+                <div class="container">
+                    <div class="container__information">
+                        <label for="">General Enquiry
+                            <input type="radio">
+                        </label>
+                    </div>
+                    <div class="container__information">
+                        <label for="">Support Request
+                            <input type="radio">
+                        </label>
+                    </div>
+                </div>
             </div>
-            <p>Query Type *</p>
-            <div class="container" id="options__container">
-                <div>
-                    <input type="radio">
-                    <label for="">General Enquiry</label>
-                </div>
-                <div>
-                    <input type="radio">
-                    <label for="">Support Request</label>
-                </div>
-                <div class="message__container">
-                    <label for="">Message *</label>
-                    <input type="text">
-                </div>
+            <div class="container__information">
+                <label for="message__id">Message *</label>
+                <textarea name="message" id="message__id" rows="4"></textarea>
             </div>
             <div class="consent__container">
                 <input type="checkbox">
                 <label for="">I consent to being contacted by the team *</label>
             </div>
             <button>Submit</button>
-        </div>
+        </main>
     </body>
 </html>

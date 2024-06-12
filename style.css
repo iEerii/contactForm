@@ -19,12 +19,24 @@ body {
     grid-template-columns: 1fr;
     gap: 20px;
     max-width: 600px;
+    padding: 20px;
     width: 90%;
 }
 
 .container {
     background-color: #FFD0D0;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.container__information {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.container__query {
+    display: flex;
+    flex-direction: column;
 }
