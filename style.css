@@ -4,31 +4,53 @@
 	padding: 0;
 }
 
+:root{
+    --green-lighter: hsl(148, 38%, 91%);
+    --green-medium: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --grey-medium: hsl(186, 15%, 59%);
+    --grey-darker: hsl(187, 24%, 22%);
+}
+
 html {
+    font-family: "Karla", sans-serif;
     font-size: 62.5%;
 }
 
 body {
     align-items: center;
     display: flex;
+    background-color: var(--green-lighter);
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
 	width: 100%;
 }
 
+span {
+    color: var(--green-medium);
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
 .main-container {
-    background-color: #3AA6B9;
+    background-color: var(--white);
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 600px;
-    padding: 20px;
-    width: 90%;
+    max-width: 660px;
+    padding: 25px;
+    width: 100%;
+}
+
+.container__header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
 }
 
 .container {
-    background-color: #FFD0D0;
     display: flex;
     gap: 10px;
     margin: 10px 0px;
@@ -40,7 +62,77 @@ body {
     flex: 1;
 }
 
+.container__information label {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.container__information input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.container__information input:hover{
+    border: 2px solid var(--green-medium);
+    cursor: pointer;
+}
+
+.container__information textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 .container__query {
     display: flex;
     flex-direction: column;
+}
+
+.container__query p {
+    font-size: 16px;
+}
+
+.container__query label {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.container__query label:hover {
+    background-color: var(--green-lighter);
+    border: 2px solid var(--green-medium);
+    cursor: pointer;
+}
+
+.container__consent {
+    align-items: center;
+    display: flex;
+}
+
+
+.container__consent label {
+    padding-left: 15px;
+}
+
+.container__consent label:hover {
+    color: var(--green-medium);
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--green-medium);
+    border: .2rem solid var(--green-medium);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: .12rem;
+    padding: 1.2rem;
+}
+
+button:hover {
+    background-color: var(--grey-darker);
+    border: .2rem solid var(--grey-darker);
+    border-radius: .5rem;
+    cursor: pointer;
 }
