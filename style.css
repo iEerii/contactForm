@@ -50,10 +50,6 @@ button {
     padding: 1.2rem;
 }
 
-p {
-    color: var(--red);
-}
-
 button:hover {
     background-color: var(--grey-darker);
     border: .2rem solid var(--grey-darker);
@@ -100,9 +96,12 @@ button:hover {
 }
 
 .container__information input {
-    border: 1px solid var(--grey-medium);
     border-radius: 5px;
     padding: 12px;
+}
+
+.inputSuccess {
+    border: 1px solid var(--grey-medium);
 }
 
 .container__information input:hover{
@@ -110,10 +109,20 @@ button:hover {
     cursor: pointer;
 }
 
+/* .container__information input:invalid{
+    border: .1rem solid var(--red);
+    border-radius: .5rem;
+} */
+
 .container__information textarea {
     border: 1px solid var(--grey-medium);
     border-radius: 5px;
     resize: none;
+}
+
+.container__information textarea:valid {
+    border: .1rem solid var(--red);
+    border-radius: .5rem;
 }
 
 .container__query {
@@ -141,15 +150,25 @@ button:hover {
 }
 
 .container__consent {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
+    flex-direction: column;
 }
 
 .container__consent label {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 .container__consent label:hover {
     color: var(--green-medium);
     cursor: pointer;
+}
+
+.error {
+    color: var(--red);
+}
+
+.errorInput {
+    border: .1rem solid var(--red);
+    border-radius: .5rem;
 }
