@@ -15,6 +15,7 @@
 
 html {
     font-family: "Karla", sans-serif;
+    color: var(--grey-darker);
     font-size: 62.5%;
 }
 
@@ -28,11 +29,36 @@ body {
 	width: 100%;
 }
 
+input:focus {
+    outline: none;
+}
+
 span {
     color: var(--green-medium);
     font-size: 16px;
     font-weight: 700;
     padding-left: 5px;
+}
+
+button {
+    background-color: var(--green-medium);
+    border: .2rem solid var(--green-medium);
+    border-radius: .5rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: .12rem;
+    padding: 1.2rem;
+}
+
+p {
+    color: var(--red);
+}
+
+button:hover {
+    background-color: var(--grey-darker);
+    border: .2rem solid var(--grey-darker);
+    border-radius: .5rem;
+    cursor: pointer;
 }
 
 .main-container {
@@ -50,10 +76,15 @@ span {
     font-weight: 700;
 }
 
+.container__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .container {
     display: flex;
     gap: 10px;
-    margin: 10px 0px;
 }
 
 .container__information {
@@ -69,7 +100,7 @@ span {
 }
 
 .container__information input {
-    border: 1px solid black;
+    border: 1px solid var(--grey-medium);
     border-radius: 5px;
     padding: 12px;
 }
@@ -80,8 +111,9 @@ span {
 }
 
 .container__information textarea {
-    border: 1px solid black;
+    border: 1px solid var(--grey-medium);
     border-radius: 5px;
+    resize: none;
 }
 
 .container__query {
@@ -89,13 +121,16 @@ span {
     flex-direction: column;
 }
 
-.container__query p {
-    font-size: 16px;
+.container__paragraph {
+    font-size: 1.6rem;
 }
 
 .container__query label {
-    border: 1px solid black;
+    align-items: center;
+    border: 1px solid var(--grey-medium);
     border-radius: 5px;
+    display: flex;
+    gap: .5rem;
     padding: 12px;
 }
 
@@ -110,29 +145,11 @@ span {
     display: flex;
 }
 
-
 .container__consent label {
-    padding-left: 15px;
+    margin-left: 1.5rem;
 }
 
 .container__consent label:hover {
     color: var(--green-medium);
-    cursor: pointer;
-}
-
-button {
-    background-color: var(--green-medium);
-    border: .2rem solid var(--green-medium);
-    border-radius: .5rem;
-    color: var(--white);
-    font-size: 1.2rem;
-    letter-spacing: .12rem;
-    padding: 1.2rem;
-}
-
-button:hover {
-    background-color: var(--grey-darker);
-    border: .2rem solid var(--grey-darker);
-    border-radius: .5rem;
     cursor: pointer;
 }

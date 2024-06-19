@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
         <title>Contact Form</title>
     </head>
     <body>
@@ -14,43 +15,53 @@
             <header class="container__header">
                 <h1>Contact Us</h1>
             </header>
-            <div class="container" id="user__container">
-                <div class="container__information">
-                    <label for="">First name <span>*</span></label>
-                    <input type="text">
-                </div>
-                <div class="container__information">
-                    <label for="">Last name <span>*</span></label>
-                    <input type="text">
-                </div>
-            </div>
-                <div class="container__information">
-                    <label for="">Email Address <span>*</span></label>
-                    <input type="email">
-                </div>
-            <div class="container__query" id="options__container">
-                <p>Query Type <span>*</span></p>
-                <div class="container">
+            <form class="container__form" action="">
+                <div class="container" id="user__container">
                     <div class="container__information">
-                        <label for="">General Enquiry
-                            <input type="radio">
-                        </label>
+                        <label for="fname">First name <span>*</span></label>
+                        <input type="text" id="fname" name="fname">
+                        <p id="fieldRequired">This field is required</p>
                     </div>
                     <div class="container__information">
-                        <label for="">Support Request
-                            <input type="radio">
-                        </label>
+                        <label for="lname">Last name <span>*</span></label>
+                        <input type="text" id="lname" name="lname">
+                        <p id="fieldRequired">This field is required</p>
                     </div>
                 </div>
-            </div>
-            <div class="container__information">
-                <label for="message__id">Message <span>*</span></label>
-                <textarea name="message" id="message__id" rows="4"></textarea>
-            </div>
-            <div class="container__consent">
-                <input type="checkbox">
-                <label for="">I consent to being contacted by the team <span>*</span></label>
-            </div>
+                    <div class="container__information">
+                        <label for="mail">Email Address <span>*</span></label>
+                        <input type="email" id="mail" name="mail">
+                        <p id="fieldRequired">Please enter a valid email address</p>
+                    </div>
+                <label class="container__paragraph">Query Type <span>*</span></label>
+                <div class="container__query" id="options__container">
+                    <div class="container">
+                        <div class="container__information">
+                            <label for="general-enquiry">  
+                                <input name="query-type" type="radio" id="general-enquiry">
+                                General Enquiry
+                            </label>
+                        </div>
+                        <div class="container__information">
+                            <label for="support-request">
+                                <input name="query-type" type="radio" id="support-request">
+                                Support Request
+                            </label>
+                        </div>
+                    </div>
+                    <p id="fieldRequired">Please select a query type</p>
+                </div>
+                <div class="container__information">
+                    <label for="message__id">Message <span>*</span></label>
+                    <textarea name="message" id="message__id" rows="4"></textarea>
+                    <p id="fieldRequired">This field is required</p>
+                </div>
+                <div class="container__consent">
+                    <input type="checkbox" id="consent" name="consent">
+                    <label for="consent">I consent to being contacted by the team</label>
+                    <span>*</span>
+                </div>
+            </form>
             <button>Submit</button>
         </main>
     </body>
