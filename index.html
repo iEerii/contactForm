@@ -18,50 +18,50 @@
                 <div class="container" id="user__container">
                     <div class="container__information">
                         <label for="fname">First name <span>*</span></label>
-                        <input class="inputSuccess" type="text" id="fname" name="fname">
+                        <input class="inputBorder" type="text" id="fname" name="fname">
                         <p id="fnameError"></p>
                     </div>
                     <div class="container__information">
                         <label for="lname">Last name <span>*</span></label>
-                        <input class="inputSuccess" type="text" id="lname" name="lname">
+                        <input class="inputBorder" type="text" id="lname" name="lname">
                         <p id="lnameError"></p>
                     </div>
                 </div>
                     <div class="container__information">
                         <label for="email">Email Address <span>*</span></label>
-                        <input class="inputSuccess" type="email" id="email" name="email">
-                        <p id="messageError"></p>
+                        <input class="inputBorder" type="email" id="email" name="email">
+                        <p id="emailError"></p>
                     </div>
                 <label class="container__paragraph">Query Type <span>*</span></label>
                 <div class="container__query" id="options__container">
                     <div class="container">
                         <div class="container__information">
                             <label for="general-enquiry">  
-                                <input name="query-type" type="radio" id="general-enquiry">
+                                <input name="query-type" type="radio" value="general-enquiry" id="general-enquiry">
                                 General Enquiry
                             </label>
                         </div>
                         <div class="container__information">
                             <label for="support-request">
-                                <input name="query-type" type="radio" id="support-request">
+                                <input name="query-type" type="radio" value="support-request" id="support-request">
                                 Support Request
                             </label>
                         </div>
                     </div>
-                    <p class="error">Please select a query type</p>
+                    <p id="errorQuery"></p>
                 </div>
                 <div class="container__information">
                     <label for="messageId">Message <span>*</span></label>
-                    <textarea name="message" id="messageId" rows="4"></textarea>
-                    <p class="error" id="messageError"></p>
+                    <textarea class="inputBorder" type="text" name="message" id="messageId" rows="4"></textarea>
+                    <p id="messageError"></p>
                 </div>
                 <div class="container__consent">
                     <div>
-                        <input type="checkbox" id="consent" name="consent">
-                        <label for="consent">I consent to being contacted by the team</label>
+                        <input type="checkbox" id="AgreeId" name="agreeCheckbox">
+                        <label for="agreementCheckbox">I consent to being contacted by the team</label>
                         <span>*</span>
                     </div>
-                    <p class="error">To submit this form, please consent to being contacted</p>
+                    <p id="agreementCheckbox"></p>
                 </div>
             </form>
             <button id="submitBtn" type="button">Submit</button>

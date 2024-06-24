@@ -100,29 +100,19 @@ button:hover {
     padding: 12px;
 }
 
-.inputSuccess {
+.inputBorder {
     border: 1px solid var(--grey-medium);
 }
 
-.container__information input:hover{
+.container__information input:hover, 
+.container__information textarea:hover {
     border: 2px solid var(--green-medium);
     cursor: pointer;
 }
 
-/* .container__information input:invalid{
-    border: .1rem solid var(--red);
-    border-radius: .5rem;
-} */
-
 .container__information textarea {
-    border: 1px solid var(--grey-medium);
     border-radius: 5px;
     resize: none;
-}
-
-.container__information textarea:valid {
-    border: .1rem solid var(--red);
-    border-radius: .5rem;
 }
 
 .container__query {
