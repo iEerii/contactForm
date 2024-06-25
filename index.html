@@ -27,22 +27,22 @@
                         <p id="lnameError"></p>
                     </div>
                 </div>
-                    <div class="container__information">
-                        <label for="email">Email Address <span>*</span></label>
-                        <input class="inputBorder" type="email" id="email" name="email">
-                        <p id="emailError"></p>
-                    </div>
+                <div class="container__information">
+                    <label for="email">Email Address <span>*</span></label>
+                    <input class="inputBorder" type="email" id="email" name="email">
+                    <p id="emailError"></p>
+                </div>
                 <label class="container__paragraph">Query Type <span>*</span></label>
                 <div class="container__query" id="options__container">
                     <div class="container">
                         <div class="container__information">
-                            <label for="general-enquiry">  
+                            <label class="radioCheck" for="general-enquiry">  
                                 <input name="query-type" type="radio" value="general-enquiry" id="general-enquiry">
                                 General Enquiry
                             </label>
                         </div>
                         <div class="container__information">
-                            <label for="support-request">
+                            <label class="radioCheck" for="support-request">
                                 <input name="query-type" type="radio" value="support-request" id="support-request">
                                 Support Request
                             </label>
@@ -65,6 +65,13 @@
                 </div>
             </form>
             <button id="submitBtn" type="button">Submit</button>
+            <footer>
+                <div class="container-admision">
+                    <img src="./img/check.png" alt="icon-check-successs">
+                    <p>Message Sent!</p>
+                    <span>Thanks for completing the form. We'll be in touch soon</span>
+                </div>
+            </footer>
         </main>
     </body>
     <script src="index.js"></script>
