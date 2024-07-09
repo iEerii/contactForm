@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('email');
     const message = document.getElementById('messageId');
     const submitBtn = document.getElementById('submitBtn');
+    const sentMessage = document.getElementById('container__hidden');
     
     const errorName = document.getElementById('fnameError');
     const errorLastName = document.getElementById('lnameError');
@@ -74,7 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!firstName.value || !lastName.value || !email.value || !message.value || queryType === null || agreeCheck === null){
             alert('You have no filled in or selected all the fields');
         } else {
-            alert('Thanks for completin the form. We\'ll be in touch soon!');
+            sentMessage.style.display = 'block';
+            sentMessage.classList.add('container-admision');
         }
     });
 });
