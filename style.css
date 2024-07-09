@@ -5,6 +5,7 @@
 }
 
 :root{
+    accent-color: var(--green-medium);
     --green-lighter: hsl(148, 38%, 91%);
     --green-medium: hsl(169, 82%, 27%);
     --red: hsl(0, 66%, 54%);
@@ -29,15 +30,16 @@ body {
 	width: 100%;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     outline: none;
 }
 
 span {
     color: var(--green-medium);
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
-    padding-left: 5px;
+    padding-left: .5rem;
 }
 
 button {
@@ -59,11 +61,13 @@ button:hover {
 
 .main-container {
     background-color: var(--white);
+    border-radius: 1.5rem;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 660px;
-    padding: 25px;
+    gap: 2rem;
+    max-width: 60rem;
+    padding: 2.5rem;
+    position: relative;
     width: 100%;
 }
 
@@ -80,7 +84,7 @@ button:hover {
 
 .container {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .container__information {
@@ -100,29 +104,20 @@ button:hover {
     padding: 12px;
 }
 
-.inputSuccess {
+.inputBorder {
     border: 1px solid var(--grey-medium);
 }
 
-.container__information input:hover{
+.container__information input:hover, 
+.container__information textarea:hover {
     border: 2px solid var(--green-medium);
     cursor: pointer;
 }
 
-/* .container__information input:invalid{
-    border: .1rem solid var(--red);
-    border-radius: .5rem;
-} */
-
 .container__information textarea {
-    border: 1px solid var(--grey-medium);
     border-radius: 5px;
+    padding: 1rem;
     resize: none;
-}
-
-.container__information textarea:valid {
-    border: .1rem solid var(--red);
-    border-radius: .5rem;
 }
 
 .container__query {
@@ -138,15 +133,16 @@ button:hover {
     align-items: center;
     border: 1px solid var(--grey-medium);
     border-radius: 5px;
+    cursor: pointer;
     display: flex;
     gap: .5rem;
     padding: 12px;
+    transition: background-color 0.3s;
 }
 
 .container__query label:hover {
     background-color: var(--green-lighter);
     border: 2px solid var(--green-medium);
-    cursor: pointer;
 }
 
 .container__consent {
@@ -171,4 +167,51 @@ button:hover {
 .errorInput {
     border: .1rem solid var(--red);
     border-radius: .5rem;
+}
+
+.container-admision {
+    background-color: var(--grey-darker);
+    border-radius: .5rem;
+    color: var(--grey-medium);
+    display: flex;
+    flex-direction: column;
+    left: 16rem;
+    position: absolute;
+    padding: 1.5rem;
+    top: -6.4rem;
+}
+
+.hidden-element {
+    display: none;
+}
+
+.container-admision img{
+    width: 1.2rem;
+}
+
+.check-message p {
+    color: var(--white);
+    font-weight: 700;
+    padding-left: .7rem;
+}
+
+.check-message {
+    display: flex;
+    flex-direction: row;
+}
+
+.thanks-message p {
+    padding-top: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        padding: 2rem;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
