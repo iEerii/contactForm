@@ -55,7 +55,3 @@ Users should be able to:
 - Frontend Mentor - [@iEerii](https://www.frontendmentor.io/profile/iEerii)
 
 - GitHub - [@iEerii](https://github.com/iEerii)
-
-## Acknowledgments
-
-- GitHub - [@JesusEmmanuelPonce](https://github.com/JesusEmmanuelPonce)
